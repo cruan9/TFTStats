@@ -2,8 +2,7 @@ import requests
 if __name__ == '__main__':
     name = input()
     api = open('API_KEY.txt')
-    api_key = api.read()\
-    print(api_key)
+    api_key = api.read()
     puuid_api = requests.get("https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/"+name+"?api_key="+api_key)
     #print(puuid_api.content)
     json_parse_puuid= puuid_api.json()
